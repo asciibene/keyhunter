@@ -43,11 +43,13 @@ import sqlite3
 import sys
 import threading
 import time
+from dotenv import load_dotenv
 from datetime import datetime, timedelta, timezone
 
 import base58
 import requests
 from nacl.signing import SigningKey
+load_dotenv()
 
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 PASTEBIN_KEY = os.environ.get("PASTEBIN_KEY", "")
